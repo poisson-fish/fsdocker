@@ -1,9 +1,8 @@
 FROM ubuntu:xenial
 RUN apt-get update
 RUN apt-get upgrade
-RUN apt-get install -y software-properties-common
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1E9377A2BA9EF27F
-RUN add-apt-repository "deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu xenial main"
+RUN echo "deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu xenial main" >> /etc/apt/sources.list
 RUN apt update
 RUN apt-get install -y --install-recommends bison bzip2 cmake curl doxygen flex g++-6 gdb m4 mercurial moreutils pkg-config python python-dev python-pip
 RUN echo $(ls /usr/bin | grep gcc)
