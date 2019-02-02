@@ -13,7 +13,7 @@ docker pull udidifier/fsdocker
 Use the -v flag with docker run to bind mount your build directory into your container, like this:
 
 ```
-docker run -v $(pwd):/opt/build fsdocker
+docker run -v $(pwd):/opt/build udidifier/fsdocker
 ```
 
 This will bind your current directory to /opt/build in your container.
@@ -24,7 +24,7 @@ Example
 ```
 
 ```
-docker run -v $(pwd):/opt/build -w /opt/build/ -e AUTOBUILD_VARIABLES_FILE=/opt/build/variables fsdocker autobuild configure -A 64 -c ReleaseFS_open -- --chan "MyViewer" -DFMODEX:BOOL=ON -DUSE_AVX2_OPTIMIZATION:BOOL=ON -DUSE_KDU=FALSE -DFMODSTUDIO:BOOL=OFF
+docker run -v $(pwd):/opt/build -w /opt/build/ -e AUTOBUILD_VARIABLES_FILE=/opt/build/variables udidifier/fsdocker autobuild configure -A 64 -c ReleaseFS_open -- --chan "MyViewer" -DFMODEX:BOOL=ON -DUSE_AVX2_OPTIMIZATION:BOOL=ON -DUSE_KDU=FALSE -DFMODSTUDIO:BOOL=OFF
 ```
 
 You can also wrap your autobuild invocation into a neat script for a cleaner command line.    
