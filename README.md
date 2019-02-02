@@ -7,7 +7,7 @@ This is a simple Dockerfile to setup a containerized build environment for build
 This image is hosted on the Docker hub, so simply run:
 
 ```
-docker pull fsdocker
+docker pull udidifier/fsdocker
 ```
 
 Use the -v flag with docker run to bind mount your build directory into your container, like this:
