@@ -1,6 +1,6 @@
-# fsdocker-clang-libfuzzer
+# fsdocker-clang-libfuzzer-jenkins
 
-This is a Dockerfile to setup a stable Clang build environment for building and fuzzing the Firestorm viewer post Alex-Ivy.
+This is a Dockerfile to setup a Jenkins slave environment for building and fuzzing the Firestorm viewer post Alex-Ivy.
 
 If you don't know what this is, this isn't for you.
 
